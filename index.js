@@ -7,7 +7,7 @@ http
       case "/":
       case "/index.html": {
         response.writeHead(200, { "Content-Type": "text/html" });
-        fs.readFile("index.html", { encoding: "utf8" })
+        fs.readFile("./routes/index.html", { encoding: "utf8" })
           .then((data) => {
             console.log(data);
             response.write(data);
@@ -21,7 +21,7 @@ http
 
       case "/about": {
         response.writeHead(200, { "Content-Type": "text/html" });
-        fs.readFile("about.html", { encoding: "utf8" })
+        fs.readFile("./routes/about.html", { encoding: "utf8" })
           .then((data) => {
             console.log(data);
             response.write(data);
@@ -35,7 +35,7 @@ http
 
       case "/contact-me": {
         response.writeHead(200, { "Content-Type": "text/html" });
-        fs.readFile("contact-me.html", { encoding: "utf8" })
+        fs.readFile("./routes/contact-me.html", { encoding: "utf8" })
           .then((data) => {
             console.log(data);
             response.write(data);
@@ -49,7 +49,7 @@ http
 
       default: {
         response.writeHead(404, { "Content-Type": "text/html" });
-        fs.readFile("404.html", { encoding: "utf8" })
+        fs.readFile("./routes/404.html", { encoding: "utf8" })
           .then((data) => {
             response.write(data);
             response.end();
