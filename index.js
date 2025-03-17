@@ -60,4 +60,6 @@ http
       }
     }
   })
-  .listen(8080);
+  .listen(8080, () => {
+    console.log("server running in localhost:8080");
+  });
