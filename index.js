@@ -9,7 +9,6 @@ http
         response.writeHead(200, { "Content-Type": "text/html" });
         fs.readFile("./routes/index.html", { encoding: "utf8" })
           .then((data) => {
-            console.log(data);
             response.write(data);
             response.end();
           })
@@ -23,7 +22,6 @@ http
         response.writeHead(200, { "Content-Type": "text/html" });
         fs.readFile("./routes/about.html", { encoding: "utf8" })
           .then((data) => {
-            console.log(data);
             response.write(data);
             response.end();
           })
@@ -37,7 +35,6 @@ http
         response.writeHead(200, { "Content-Type": "text/html" });
         fs.readFile("./routes/contact-me.html", { encoding: "utf8" })
           .then((data) => {
-            console.log(data);
             response.write(data);
             response.end();
           })
